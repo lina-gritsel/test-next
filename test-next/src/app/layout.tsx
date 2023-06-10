@@ -15,6 +15,34 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* <meta charset="utf-8" /> */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <title>Cabinet</title>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+        />
+        <link
+          media="all"
+          rel="stylesheet"
+          href="https://static.biterika.team/brobooster/assets/css/vendor.min.css"
+        />
+        <link
+          media="all"
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.2/build/css/intlTelInput.css"
+        />
+        <link
+          media="all"
+          rel="stylesheet"
+          href="https://static.biterika.team/brobooster/assets/css/styles.min.css"
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
