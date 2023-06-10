@@ -1,22 +1,22 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { useTable } from './hooks'
+import React from "react";
+import { useTable } from "./hooks";
 
 interface Campaigns {
-  id: number
-  title: string
-  city: string
-  locations: number
-  transports: number
-  display: string
-  budget: number
-  photos: string[]
-  state: string
+  id: number;
+  title: string;
+  city: string;
+  locations: number;
+  transports: number;
+  display: string;
+  budget: number;
+  photos: string[];
+  state: string;
 }
 
 const Table = () => {
-  const { campaigns } = useTable()
+  const { campaigns } = useTable();
 
   return (
     <div className="table">
@@ -163,7 +163,33 @@ const Table = () => {
                             className="btn-more second js-menu-btn"
                           >
                             <svg className="icon icon-small">
-                              <use xlinkHref="#more-16"></use>
+                              <use xlinkHref="#more-16">
+                                <symbol
+                                  fill="none"
+                                  viewBox="0 0 16 16"
+                                  id="more-16"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="2.5"
+                                    cy="8"
+                                    r="1.5"
+                                    fill="currentColor"
+                                  ></circle>
+                                  <circle
+                                    cx="8"
+                                    cy="8"
+                                    r="1.5"
+                                    fill="currentColor"
+                                  ></circle>
+                                  <circle
+                                    cx="13.5"
+                                    cy="8"
+                                    r="1.5"
+                                    fill="currentColor"
+                                  ></circle>
+                                </symbol>
+                              </use>
                             </svg>
                           </button>
                           <div className="menu menu--right js-menu-list">
@@ -201,7 +227,21 @@ const Table = () => {
                           className="btn-more second ml-3 ml-lg-4"
                         >
                           <svg className="icon icon-small">
-                            <use xlinkHref="#arrow-right-16"></use>
+                            <use xlinkHref="#arrow-right-16">
+                              <symbol
+                                fill="none"
+                                viewBox="0 0 16 16"
+                                id="arrow-right-16"
+                              >
+                                <path
+                                  d="M5.902 13l5-5-5-5"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </symbol>
+                            </use>
                           </svg>
                         </a>
                       </div>
@@ -213,7 +253,7 @@ const Table = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Table
+export default Table;
