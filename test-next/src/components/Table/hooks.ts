@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { getAllInfo } from '../../api/requests'
 import { useEffect, useState } from 'react'
@@ -22,7 +22,7 @@ export const useTable = () => {
   }, [])
 
   return {
-    campaigns: campaigns.campaigns,
+    campaigns: campaigns.campaigns || [],
     isLoading,
   }
 }

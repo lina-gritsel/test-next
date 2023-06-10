@@ -12,12 +12,12 @@ interface Campaigns {
   display: string
   budget: number
   photos: string[]
-  state:string
+  state: string
 }
 
 const Table = () => {
-  const { campaigns, isLoading } = useTable()
-  console.log(campaigns)
+  const { campaigns } = useTable()
+
   return (
     <div className="table">
       <div className="table__md-wrap">
@@ -59,7 +59,7 @@ const Table = () => {
                 display,
                 budget,
                 photos,
-                state
+                state,
               }: Campaigns) => (
                 <div
                   key={id}
