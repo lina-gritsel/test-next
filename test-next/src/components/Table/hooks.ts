@@ -1,12 +1,28 @@
-import { useQuery } from '@tanstack/react-query'
+"use client";
+
 import { getAllInfo } from '../../api/requests'
+import { useEffect, useState } from 'react'
 
 export const useTable = () => {
-  const { data, isLoading, isFetching } = useQuery(
-    ['getAllInfo'],
-    () => getAllInfo(),
-    { refetchOnWindowFocus: false, staleTime: 60_000 },
-  )
+  const [campaigns, setCampaigns] = useState<any>([])
+  const [isLoading, setIsLoanding] = useState(true)
 
-  return {data, loading: isLoading || isFetching}
+  useEffect(() => {
+    ;(async () => {
+      try {
+        const data = await getAllInfo()
+
+        setCampaigns(data)
+      } catch (error) {
+        console.log(error)
+      } finally {
+        setIsLoanding(false)
+      }
+    })()
+  }, [])
+
+  return {
+    campaigns: campaigns.campaigns,
+    isLoading,
+  }
 }
