@@ -2,7 +2,7 @@ import React from 'react'
 
 const CampaignStatuses = () => {
   return (
-    <div>
+    <div className="filter-tabs__scroll scroll-none">
       <ul className="filter-tabs__header flex-auto js-tabs-buttons mb-15 mb-md-2 mb-lg-25">
         <li data-tab="all" className="filter-tabs__btn-circle active">
           Все

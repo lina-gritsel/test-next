@@ -2,7 +2,7 @@ import React from 'react'
 
 const Table = () => {
   return (
-    <div>
+    <div className="table">
       <div className="table__md-wrap">
         <div className="table__head table__head--col-8 is-tablet mb-15 mb-lg-2">
           <div className="table__row">

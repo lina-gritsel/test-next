@@ -8,10 +8,22 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Filters />
-      <Sidebar />
-      <CampaignStatuses />
-      <Table />
+      <main className="main flex-column">
+        <section className="lk-section flex-column flex-auto">
+          <div className="container flex-column flex-auto">
+            <div className="lk-wrapper full">
+              <Filters />
+              <div className="lk-content flex-column flex-auto">
+                <Sidebar />
+                <div className="filter-tabs js-tabs mt-2 mt-lg-25">
+                  <CampaignStatuses />
+                  <Table />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   )
 }
