@@ -1,6 +1,9 @@
 import React from 'react'
+import { useTable } from './hooks'
 
 const Table = () => {
+  const {data, loading} = useTable()
+  console.log(data)
   return (
     <div className="table">
       <div className="table__md-wrap">
