@@ -1,22 +1,22 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { useTable } from './hooks'
+import React from "react";
+import { useTable } from "./hooks";
 
 interface Campaigns {
-  id: number
-  title: string
-  city: string
-  locations: number
-  transports: number
-  display: string
-  budget: number
-  photos: string[]
-  state: string
+  id: number;
+  title: string;
+  city: string;
+  locations: number;
+  transports: number;
+  display: string;
+  budget: number;
+  photos: string[];
+  state: string;
 }
 
 const Table = () => {
-  const { campaigns } = useTable()
+  const { campaigns } = useTable();
 
   return (
     <div className="table">
@@ -253,7 +253,7 @@ const Table = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Table
+export default Table;
