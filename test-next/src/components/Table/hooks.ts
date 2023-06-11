@@ -8,7 +8,7 @@ export const useTable = () => {
   const [isLoading, setIsLoanding] = useState(true)
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       try {
         const data = await getAllInfo()
 
